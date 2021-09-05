@@ -1,0 +1,428 @@
+  
+/* .chatroom .widget {
+    display: none;
+    width: 350px;
+    right: 15px;
+    height: 500px;
+    bottom: 5%;
+    position: fixed;
+    background: #fff;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 5px 0 #00000096; }*/
+.chatroom{
+    width:97%;
+    height:690px;
+    color:#030303;
+    max-height:100vh;
+    backdrop-filter: blur(5px) contrast(.8);
+    background-color:rgba(38, 38, 38, 0.351);
+    border-radius:36px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    letter-spacing:normal;
+    overflow:hidden;
+    box-shadow:0 5px 60px 30px rgba(31, 31, 31, 0.8)
+}
+
+.chatroom,.chatroom *{
+    box-sizing:border-box
+    
+}
+.chatroom{
+    width:97%;
+    height:690px;
+    color:#030303;
+    max-height:100vh;
+    background-color:rgba(63, 63, 63, 0.287);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    border-radius:36px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    letter-spacing:normal;
+    overflow:hidden;
+    box-shadow:0 5px 60px 30px rgba(31, 31, 31, 0.8)
+}
+.chatroom.closed::before{
+/* content:'🤖';*/
+position: absolute;
+bottom: 10px;
+right: 10%;
+width: 90%;
+height: 50px; 
+background: rgba(0, 0, 0, 0.048); 
+background-image: url("https://i.imgur.com/UKmXjrq.png");
+}
+.chatroom.closed{
+    position: absolute;
+    bottom:30%;
+    right:17%;
+    float:right;
+    height:50px;
+    width:10%;
+    max-height:100vh;
+    /* background-color:rgba(63, 63, 63, 0.287);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);*/
+    text-decoration-color:transparent; 
+    border:7px solid rgb(255, 255, 255);
+    background:url("img/botimage.jpg");
+    background-position: center;
+    background-size: cover;
+    color:linear-gradient(to right top,#df057d,#ba05df,#7d02f0); 
+    /* border-image: url("https://i.imgur.com/UKmXjrq.png") 10%; */
+    /* background:linear-gradient(to right top,#df057da4,#bb05df8e,#7d02f086);
+    -webkit-backdrop-filter: blur(0px); */
+    background-color:rgba(29, 29, 29, 0.514);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    padding:43px 20px 0px 45px;
+    border-radius:28px;
+    border-bottom-right-radius:0;
+    box-shadow:0 5px 60px 30px rgba(31, 31, 31, 0.4);
+
+    
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+.chatroom.closed:hover{
+    /* background-image: url("https://i.imgur.com/UKmXjrq.png");*/ 
+    background:url("img/botimage.jpg");
+    background-position: center;
+    background-size: cover; 
+    border:7px solid rgb(8, 8, 8);
+    padding:1px 25px 0px 34px;
+    color:transparent;
+    /* background:linear-gradient(to left top,rgba(255, 174, 68, 0.431),#fac9415d,#ff523b54);*/
+    caret-color: rgba(255, 255, 255, 0.856);
+    box-shadow:0 5px 0px 290px rgba(233, 219, 219, 0.386),
+               0 5px 0px 100px rgba(255, 255, 255, 0.582);
+               filter:brightness(105%);
+    transition-timing-function: ease;
+    cursor:pointer;
+    transform: scale(1.5);
+    animation: animate 1.1s ease-in-out infinite alternate;
+}
+
+/*
+@keyframes animate {
+    0%
+    {
+        box-shadow: 0 5px 0px 320px rgba(233, 219, 219, 0.486),
+                    0 5px 0px 115px rgba(255, 255, 255, 0.582);
+                    background:linear-gradient(to left top,rgba(255, 174, 68, 0.431),#fac9415d,#ff523b54)
+    }
+    100%
+    {
+        box-shadow: 0 5px 0px 280px rgba(233, 219, 219, 0.160),
+                    0 5px 0px 100px rgba(255, 255, 255, 0.582);
+                    background: rgba(red)
+    }
+}
+*/
+
+.chatroom.closed:hover::before{
+    /* content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    background: linear-gradient(45deg,#fb0094,#0000ff);
+    width:110%;
+    height: 110%;
+    filter:blur(45%) */
+
+    /* display:block ; */
+    /* background: red;
+    font-size: 30px;
+    font-weight: 990;
+    color:#a1a0a0 */
+}
+.chatroom h3:hover{
+    background-color:#fffffff5;
+    /* content: url("https://i.imgur.com/UKmXjrq.png"); */
+    /* background-image: url("https://i.imgur.com/UKmXjrq.png"); */
+    color: transparent;
+    margin:0;
+    height:40px;
+    font-weight:600;
+    font-size:18px;
+    transition-timing-function: ease;
+    transform: scale(1.034);
+    display:ruby;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer}
+.chatroom h3:hover::before{
+        background-color:#fffffff5;
+        /* content: url("https://i.imgur.com/UKmXjrq.png"); */
+        /* background-image: url("https://i.imgur.com/UKmXjrq.png"); */
+        color:transparent;
+        margin:0;
+        height:40px;
+        width:3000px;
+        font-weight:600;
+        font-size:18px;
+        transition-timing-function: ease;
+        transform: scale(1.034);
+        display:ruby;
+        align-items:center;
+        justify-content:center;
+        cursor:pointer}
+.chatroom h3{
+    background-color:#fffffff5;
+    /* background-image: url("https://i.imgur.com/UKmXjrq.png"); */
+    color:rgb(4, 4, 4);
+    margin:0;
+    height:40px;
+    font-weight:600;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer
+}
+
+.chatroom .chats{
+    box-sizing:border-box;
+    padding:20px;
+    margin:0;
+    height:calc(100% - 80px);
+    overflow-y:scroll;
+    -webkit-overflow-scrolling:touch
+}
+.chatroom .chats .chat{
+    background:rgb(247, 239, 239);
+    position:relative;
+    padding:10px 17px;
+    font-size:16px;
+    font-weight:500;
+    border-radius:25px;
+    list-style:none;
+    float:left;
+    clear:both;
+    margin:10px 5px 0;
+    max-width:90%;
+    box-shadow: 0 5px 90px -10px rgba(0, 0, 0, 0.05), 0 3px 9px 0 #2e2e2e96
+}
+.chatroom .chats .chat img{
+    max-width:100%;
+    vertical-align:middle
+}
+.chatroom .chats .chat.left{
+    border-bottom-left-radius:0;
+}
+.chatroom .chats .chat.right{
+    float:right;
+    clear:both;
+    border: 0.01px solid white;
+    background-color: #01050f;
+    color: #ffffff;
+    border-bottom-right-radius:0
+}
+.chatroom .chats .chat .text{
+    word-wrap:break-word
+}
+.chatroom .chats .chat.chat-img{
+    padding:10px
+}
+.chatroom .chats .chat a{
+    text-decoration:none;
+    color:#3498db
+}
+.chatroom .chats .chat ol,.chatroom .chats .chat ul{
+    margin:0;
+    padding-left:1.5em
+}
+.chatroom .chats .chat ol li,.chatroom .chats .chat ul li{
+    padding-left:0
+}
+.chatroom .chats .chat.waiting{
+    margin:10px 0;
+    background:transparent;
+    padding:0
+}
+@keyframes fade{
+    0%{
+        opacity:1
+    }
+    to{
+        opacity:.3
+    }
+}
+.chatroom .chats .chat.waiting span{
+    font-size:1.5em;
+    animation-name:fade;
+    animation-duration:1ms;
+    animation-iteration-count:10;
+    animation-direction:alternate;
+    animation-timing-function:ease-in-out
+}
+.chatroom .chats .chat.waiting span:first-child{
+    animation-delay:0s;
+}
+.chatroom .chats .chat.waiting span:nth-child(1){
+    animation-delay:1s;
+}
+.chatroom .chats .chat.waiting span:nth-child(2){
+    animation-delay:2s;
+}
+.chatroom .chats .time{
+    list-style:none;
+    clear:both;
+    height:10px;
+    font-size:10px;
+    color:#f8f7f7;
+    margin:5px 0 20px
+}
+.chatroom .chats .time.left{
+    float:left
+}
+.chatroom .chats .time.right{
+    float:right
+}
+.chatroom .chats .chat-buttons{
+    position:relative;
+    padding:0;
+    font-size:14px;
+    list-style:none;
+    clear:both;
+    margin:10px 0;
+    text-align:center
+}
+.chatroom .chats .chat-buttons .chat-button{
+    display:inline-block;
+    transition:all .3s ease;
+    cursor:pointer;
+    margin:3px;
+    background-color:rgba(0, 0, 0, 0.842);
+    color:rgb(255, 251, 251);
+    border:2px solid #fff;
+    padding:7px 15px;
+    letter-spacing:normal;
+    border-radius:13px;
+    box-shadow: 0 5px 90px -10px rgba(0, 0, 0, 0.05), 0 3px 9px 0 #2e2e2e96
+}
+.chatroom .chats .chat-buttons .chat-button.chat-button-selected,.chatroom .chats .chat-buttons .chat-button:hover{
+    background-color:rgba(52,61,78,.6);
+    color:#fff;
+    transform: scale(1.1)
+}
+.chatroom .chats .chat-buttons .chat-button.chat-button-disabled{
+    color: darkgray;
+    border: 2px solid grey;
+    background-color: grey;
+}
+.chatroom .input{
+    height:40px;
+    width:100%;
+    margin:0;
+    padding:0 5px;
+    background-color:#ffffff;
+    display:flex;
+    flex-direction:row;
+    align-items:center
+}
+.chatroom .input input[type=text]{
+    background-color:rgba(134, 134, 134, 0.637);
+    outline:0;
+    border:1px solid #fff;
+    border-right:none;
+    color:#000000;
+    padding:0 5px;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;
+    border-top-right-radius:30px;
+    border-bottom-right-radius:30px;
+    height:30px;
+    flex:4;
+    box-sizing:border-box;
+    font-size:14px;
+    transition:background-color .2s ease
+}
+.chatroom .input input[type=text]:focus{
+    box-shadow:none;
+    background-color:rgb(201, 199, 199)
+}
+.chatroom .input input[type=text]:hover{
+    content:'text';
+    transform: scale(1.015)
+}
+.chatroom .input input[type=submit]{
+    display:inline-block;
+    background:#000000eb;
+    border:1px solid #fff;
+    color:#fff;
+    height:30px;
+    min-width:70px;
+    line-height:1;
+    text-align:center;
+    padding:0;
+    font-size:12px;
+    flex:1;
+    box-shadow:none;
+    border-top-left-radius:13px;
+    border-bottom-left-radius:13px;
+    border-top-right-radius:13px;
+    border-bottom-right-radius:13px;
+    cursor:pointer;
+    transition:all .3s ease;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    outline:none;
+    font-weight:600;
+    text-transform:uppercase
+}
+.chatroom .input input[type=button]{
+    display:inline-block;
+    background:#000000e5;
+    border:1px solid #fff;
+    color:#fff;
+    height:25px;
+    min-width:70px;
+    line-height:1;
+    text-align:center;
+    padding:0;
+    font-size:10px;
+    flex:1;
+    box-shadow:none;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+    cursor:pointer;
+    transition:all .3s ease;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    outline:none;
+    font-weight:600;
+    text-transform:uppercase;
+    transform: scale(1.08)
+}
+.chatroom .input input[type=submit]:hover{
+    background:rgba(51, 51, 51, 0.784);
+    transform: scale(1.25)
+}
+.chatroom .input input[type=button]:hover{
+    background:hsla(0,0%,100%,.8);
+    transform: scale(1.075)
+}
+.chatroom #speech-input{
+    height:30px;
+    width:30px;
+    margin-left:5px;
+    background:#000000e3;
+    border:1px solid #fff;
+    color:#fff;
+    border-radius:3px;
+    cursor:pointer;
+    transition:all .3s ease
+}
+.chatroom #speech-input:hover{
+    background:rgba(255, 31, 6, 0.753);
+    transform: scale(1.3)
+}
+.chatroom .vertical-center{
+    vertical-align:middle
+}

@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+        <title>
+            XYZ Intl.
+        </title>
+        <link rel="stylesheet" href="website.css" />
+        <link rel="stylesheet" href="Chatroom2.css" />
+        <style>
+            .chat-container {
+                font-family: 'Ubuntu', sans-serif;
+                width: 500px;
+                position: absolute;
+                bottom: 8px;
+                right: 10px;
+                font-size: 12px;
+            }
+        </style>
+        <style>
+            body, html {
+              height: 100%;
+              margin: 0;
+            }
+
+            .bg {
+              /* The image used */
+              background-image: url("university.jpg");
+
+              /* Full height */
+              height: 100%;
+
+              /* Center and scale the image nicely */
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+        </style>
+
+    </head>
+
+    <body>
+    <!--Navbar-->
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <img src="img/logo.png" alt="School Logo" style="height: 40px; width: 80px;">
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#" target="_blank" id="schoolname">XYZ International School</a>
+          <a href="#" target="_blank">About Us</a>
+          <a href="#" target="_blank">Enrollment</a>
+          <a href="#" target="_blank">Academics</a>
+          <a href="#" target="_blank">Athletics</a>
+          <a href="#" target="_blank">Community</a>
+        </div>
+    </div>
+
+    <!--BACKGROUND IMAGE-->
+    <div class="showcase">
+    </div>
+
+    <!--home-boxes section-->
+    <section class='home-boxes'>
+        <div class='home-box'>
+            <i class="fas fa-graduation-cap fa-4x"></i>
+            <h3>After School Plans</h3>
+            <p>We prepare our students to not only do well in their classes, but to do well in life via regular
+            surveys, career counselling, lessons on general knowledge and much more.</p>
+        </div>
+        <div class='home-box'>
+            <i class="fas fa-chart-pie fa-4x"></i>
+            <h3>University Placements</h3>
+            <p>Among those of our students who wished to go for higher studies in 2020,
+            over 80% were admitted to their institute of first preference. </p>
+        </div>
+        <div class='home-box'>
+            <i class="fas fa-award fa-4x"></i>
+            <h3>Extra-curricular Achievement</h3>
+            <p>Our students excel not only within school, but outside as well. </p>
+        </div>
+        <div class='home-box'>
+            <i class="fas fa-users fa-4x"></i>
+            <h3>Community</h3>
+            <p>Through their shared time and efforts, our students build deep and long-lasting bonds with their peers. </p>
+        </div>
+    </section>
+
+    <!--home-info Section-->
+    <section class='home-info'>
+        <img src='img/leadership.jpg' style="height: 200px; width: 300px;" alt="Leadership">
+        <img src='img/logo.png' style="height: 200px; width: 300px;" alt="School Logo">
+        <div>
+            <h1>Mission Statement</h1>
+            <p>Our goal is to nurture and build the brilliant young minds in our care, so as to bring up a generation
+                of kind, sincere, enthusiastic, and competent youths. We strive to inculcate hard work and dedication
+                in our students, while still allowing them to enjoy this wonderful period in their lives.
+            </p>
+            <a href='#' class='btn'>Learn More</a>
+        </div>
+    </section>
+
+    <!--Chatbot-->
+    <div class="bg">
+        <div class="chat-container"></div>
+
+        <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
+        <script type="text/javascript">
+            var chatroom = new window.Chatroom({
+                host: "http://localhost:5005",
+                title: "XYZ CHATBOT",
+                fontFamily: "Ubuntu",
+                container: document.querySelector(".chat-container"),
+                welcomeMessage: "Hi, I am Zee. How may I help you?",
+                speechRecognition: "en-US",
+                voiceLang: "en-AU",
+                height: "50px",
+                fontSize: "10px"
+            });
+            console.log(chatroom);
+            $(document).ready(function() {
+                setTimeout(function(){
+                    console.log(chatroom);
+                    chatroom.openChat();
+                }, 1000);
+                document.getElementById("input_text").value = "Hi";
+                document.getElementById("submit_input").click();
+            });
+        // chatroom.openChat();
+        </script>
+
+    </div>
+    
+    <script src="https://kit.fontawesome.com/79c8253ff8.js" crossorigin="anonymous"></script>
+    </body>
+</html>
