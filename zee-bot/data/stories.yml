@@ -1,0 +1,826 @@
+version: "2.0"
+stories:
+- story: byebye
+  steps:
+  - intent: goodbye
+  - action: utter_happy
+- story: timetable
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: seek_timetable_help
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_timetable_val
+  - action: show_timetable
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: video_player_happy
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: show_school_vd
+  - action: school_vd
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: video_player_sad
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: show_school_vd
+  - action: school_vd
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_doubtshoot
+- story: admission details with contacts and fees - happy
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: show_admission_details
+  - action: utter_admission_details
+  - action: utter_related_details_1
+- story: Exam date sheet
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: exam_date_sheet
+  - action: utter_exam_dates
+  - action: utter_Edate_pg1
+  - action: utter_did_that_help
+- story: fees happy
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: fee_structure
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_fee_structure
+  - action: school_fees
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: fees_terminate
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: fee_structure
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_fee_structure
+  - action: school_fees
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_end
+- story: fees_terminate_2
+  steps:
+  - intent: fee_structure
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_fee_structure
+  - action: school_fees
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: calendar_happy
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: academic_calendar
+  - action: utter_which_year
+  - intent: year
+    entities:
+    - year: '2021'
+  - slot_was_set:
+    - year: '2021'
+  - action: utter_which_month
+  - intent: year
+    entities:
+    - month: January
+  - slot_was_set:
+    - month: January
+  - action: academic_calendar
+  - action: utter_related_details_2
+  - intent: show_admission_details
+  - action: utter_admission_details
+- story: calendar_diff
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: academic_calendar
+  - action: utter_which_year
+  - intent: year
+    entities:
+    - year: '2021'
+  - slot_was_set:
+    - year: '2021'
+  - action: utter_which_month
+  - intent: year
+    entities:
+    - month: January
+  - slot_was_set:
+    - month: January
+  - action: academic_calendar
+  - action: utter_related_details_2
+  - intent: show_intro
+  - action: utter_agreement
+  - action: utter_show_options
+- story: academic calendar-op
+  steps:
+  - intent: academic_calendar
+  - action: utter_which_year
+  - intent: year
+    entities:
+    - year: '2022'
+  - slot_was_set:
+    - year: '2022'
+  - action: utter_which_month
+  - intent: month
+    entities:
+    - month: January
+  - slot_was_set:
+    - month: January
+  - action: academic_calendar
+  - action: utter_related_details_2
+- story: Story from Conversation ID eb8ae7660d914d2ca0f544e990456c34
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_vd
+  - action: school_vd
+  - action: utter_did_that_help
+- story: Exam syllabus happy
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: exam_syllabus
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_exam
+  - intent: exam_syllabus
+    entities:
+    - exam: periodic
+  - slot_was_set:
+    - exam: periodic
+  - action: utter_which_subject
+  - intent: exam_syllabus
+    entities:
+    - subject1: Maths
+  - slot_was_set:
+    - subject1: Maths
+  - action: show_exam
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+- story: Exam Syllabus - op
+  steps:
+  - intent: exam_syllabus
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_exam
+  - intent: exam_syllabus
+    entities:
+    - exam: periodic
+  - slot_was_set:
+    - exam: periodic
+  - action: utter_which_subject
+  - intent: exam_syllabus
+    entities:
+    - subject1: Maths
+  - slot_was_set:
+    - subject1: Maths
+  - action: show_exam
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: Exam syllabus sad
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: exam_syllabus
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_exam
+  - intent: exam_syllabus
+    entities:
+    - exam: periodic
+  - slot_was_set:
+    - exam: periodic
+  - action: utter_which_subject
+  - intent: exam_syllabus
+    entities:
+    - subject1: Maths
+  - slot_was_set:
+    - subject1: Maths
+  - action: show_exam
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_end
+- story: Exam syllabus diff
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: exam_syllabus
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_exam
+  - intent: exam_syllabus
+    entities:
+    - exam: periodic
+  - slot_was_set:
+    - exam: periodic
+  - action: utter_which_subject
+  - intent: exam_syllabus
+    entities:
+    - subject1: Maths
+  - slot_was_set:
+    - subject1: Maths
+  - action: show_exam
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: zoom class
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: zoom_details
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_zoom_details
+  - action: show_zoom
+  - action: utter_dont_share
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: zoom class-op
+  steps:
+  - intent: zoom_details
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_zoom_details
+  - action: show_zoom
+  - action: utter_dont_share
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: Email id (contacts)-diff
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: email_details
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_email_ids
+  - action: show_email_ids
+  - action: utter_related_details_5
+  - intent: zoom_details
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_zoom_details
+  - action: show_zoom
+  - action: utter_dont_share
+  - action: utter_did_that_help
+- story: Email id (contacts)-deny
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: email_details
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_email_ids
+  - action: show_email_ids
+  - action: utter_related_details_5
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_end
+- story: Contact_details-(other..)
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_contact_details
+  - action: utter_contact_who
+  - intent: other_contacts
+  - action: school_contacts
+  - action: utter_related_details_5
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_end
+- story: Contact_details-(principal)-sad
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_contact_details
+  - action: utter_contact_who
+  - intent: contact_principal
+  - action: utter_principal_email
+  - action: utter_message_now
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_end
+- story: Contact_details-(principal)-Happy
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_contact_details
+  - action: utter_contact_who
+  - intent: contact_principal
+  - action: utter_principal_email
+  - action: utter_message_now
+  - intent: principal_go
+  - action: utter_provide_id
+  - intent: mail_id_email
+    entities:
+    - email: bhakat2004@gmail.com
+  - slot_was_set:
+    - email: bhakat2004@gmail.com
+  - action: utter_provide_subject
+  - intent: mail_id_subject
+    entities:
+    - subject: participation
+  - slot_was_set:
+    - subject: participation
+  - action: utter_provide_message
+  - intent: mail_id_message
+    entities:
+    - message: Hello this is a meesage from the xyz chatbot
+  - slot_was_set:
+    - message: Hello this is a meesage from the xyz chatbot
+  - action: email_submit
+  - action: utter_your_email_sent
+  - action: utter_did_that_help
+- story: Contact_details-(principal)-Happy-op
+  steps:
+  - intent: school_contact_details
+  - action: utter_contact_who
+  - intent: contact_principal
+  - action: utter_principal_email
+  - action: utter_message_now
+  - intent: principal_go
+  - action: utter_provide_id
+  - intent: mail_id_email
+    entities:
+    - email: bhakat2004@gmail.com
+  - slot_was_set:
+    - email: bhakat2004@gmail.com
+  - action: utter_provide_subject
+  - intent: mail_id_subject
+    entities:
+    - subject: participation
+  - slot_was_set:
+    - subject: participation
+  - action: utter_provide_message
+  - intent: mail_id_message
+    entities:
+    - message: Hello this is a meesage from the xyz chatbot
+  - slot_was_set:
+    - message: Hello this is a meesage from the xyz chatbot
+  - action: email_submit
+  - action: utter_your_email_sent
+  - action: utter_did_that_help
+- story: sending email
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: send_email
+  - action: utter_provide_id
+  - intent: mail_id_email
+    entities:
+    - email: xyzinternational.s@gmail.com
+  - slot_was_set:
+    - email: xyzinternational.s@gmail.com
+  - action: utter_provide_subject
+  - intent: mail_id_subject
+    entities:
+    - subject: participation
+  - slot_was_set:
+    - subject: participation
+  - action: utter_provide_message
+  - intent: mail_id_message
+    entities:
+    - message: Hello this is a meesage from the xyz chatbot
+  - slot_was_set:
+    - message: Hello this is a meesage from the xyz chatbot
+  - action: email_submit
+  - action: utter_your_email_sent
+  - action: utter_related_details_4
+- story: Report card
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: report_card
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_give_name
+  - intent: register_name
+    entities:
+    - name: Jhon
+  - slot_was_set:
+    - name: Jhon
+  - action: show_report_card
+  - action: utter_reportcard_email
+  - intent: report_mail_id_email
+    entities:
+    - email: bhakat2004@gmail.com
+  - slot_was_set:
+    - email: bhakat2004@gmail.com
+  - action: report_email_submit
+  - action: utter_your_email_sent
+  - action: utter_related_details_4
+- story: event path
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: upcoming_events_ask
+  - action: utter_event
+  - intent: upcoming_events
+    entities:
+    - event: mun
+  - slot_was_set:
+    - event: mun
+  - action: show_event
+  - action: utter_related_details_3
+  - intent: event_contact
+  - action: utter_event_contact
+  - action: show_event_contacts
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_doubtshoot
+- story: event path-op
+  steps:
+  - intent: upcoming_events_ask
+  - action: utter_event
+  - intent: upcoming_events
+    entities:
+    - event: mun
+  - slot_was_set:
+    - event: mun
+  - action: show_event
+  - action: utter_related_details_3
+  - intent: event_contact
+  - action: utter_event_contact
+  - action: show_event_contacts
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_doubtshoot
+- story: event contact-sad
+  steps:
+  - intent: event_contact
+  - action: utter_event_contact
+  - action: show_event_contacts
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_doubtshoot
+- story: event contact-happy
+  steps:
+  - intent: event_contact
+  - action: utter_event_contact
+  - action: show_event_contacts
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+- story: Leave Letter- happy
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: Leave_application
+  - action: utter_leave_proceed
+  - intent: leave_go
+  - action: utter_give_reason
+  - intent: leave_id_message
+    entities:
+    - message: Im having sever cough and cold and so i will not be able to attend school for 2 days
+  - slot_was_set:
+    - message: Im having sever cough and cold and so i will not be able to attend school for 2 days
+  - action: leave_note_submit
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+- story: Leave Letter_op
+  steps:
+  - intent: show_intro
+  - action: utter_show_options
+  - intent: Leave_application
+  - action: utter_leave_proceed
+  - intent: leave_go
+  - action: utter_give_reason
+  - intent: leave_id_message
+    entities:
+    - message: Im having sever cough and cold and so i will not be able to attend school for 2 days
+  - slot_was_set:
+    - message: Im having sever cough and cold and so i will not be able to attend school for 2 days
+  - action: leave_note_submit
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+- story: Leave Letter- sad
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: Leave_application
+  - action: utter_leave_proceed
+  - intent: deny
+  - action: utter_leave_end
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_end
+- story: covid cases
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: give_covid
+  - action: covid_cases
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_end
+- story: covid cases -diff
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: give_covid
+  - action: covid_cases
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: Uniform-senior
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: get_uniform
+  - action: utter_which_uniform
+  - intent: senior_uniform
+    entities:
+    - uniform: senior uniform
+  - slot_was_set:
+    - uniform: senior uniform
+  - action: school_uniform
+  - action: utter_related_details_2
+- story: Uniform-junior
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: get_uniform
+  - action: utter_which_uniform
+  - intent: junior_uniform
+    entities:
+    - uniform: junior uniform
+  - slot_was_set:
+    - uniform: junior uniform
+  - action: school_uniform
+  - action: utter_related_details_2
+- story: School timings happy
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_timings
+  - action: utter_school_timings
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+- story: School timings sad
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_timings
+  - action: utter_school_timings
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_doubtshoot
+- story: School timings op
+  steps:
+  - intent: school_timings
+  - action: utter_school_timings
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_doubtshoot
+- story: School location-diff
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_location
+  - action: utter_school_location
+  - action: utter_feedback
+  - intent: show_intro
+  - action: utter_show_options
+- story: School location-deny
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_location
+  - action: utter_school_location
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_end
+- story: School location
+  steps:
+  - intent: school_location
+  - action: utter_school_location
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_end
+- story: School_holidays
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_break
+  - action: utter_school_holiday
+  - intent: summer_break
+    entities:
+    - break: summer break
+  - slot_was_set:
+    - break: summer break
+  - action: holidays
+  - action: utter_related_details_6
+- story: Story from Conversation ID dd06402102924fa393dd5afd367e9fb1
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: exam_syllabus
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12A
+  - slot_was_set:
+    - class: 12A
+  - action: utter_exam
+  - intent: exam_syllabus
+    entities:
+    - exam: final
+  - slot_was_set:
+    - exam: final
+  - action: utter_which_subject
+  - intent: exam_syllabus
+    entities:
+    - subject1: maths
+  - slot_was_set:
+    - subject1: maths
+  - action: show_exam
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+- story: Story from Conversation ID c2350d6944f548b59a977d3ee990f12e
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: school_contact_details
+  - action: utter_contact_who
+  - intent: contact_principal
+  - action: utter_principal_email
+  - action: utter_message_now
+  - intent: principal_go
+  - action: utter_provide_id
+  - intent: mail_id_email
+    entities:
+    - email: xyzinternational.s@gmail.com
+  - slot_was_set:
+    - email: xyzinternational.s@gmail.com
+  - action: utter_provide_subject
+  - intent: mail_id_subject
+    entities:
+    - subject: Participation
+  - slot_was_set:
+    - subject: Participation
+  - action: utter_provide_message
+  - intent: upcoming_events_ask
+    entities:
+    - message: I want to participate .
+  - slot_was_set:
+    - email: xyzinternational.s@gmail.com
+  - slot_was_set:
+    - subject: Participation
+  - slot_was_set:
+    - message: I want to participate .
+  - action: email_submit
+  - action: utter_your_email_sent
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - action: utter_feedback
+- story: Story from Conversation ID b06f560532cc4cb5b23731e370e03ca8
+  steps:
+  - intent: show_intro
+  - action: utter_show_options
+  - intent: report_card
+  - action: utter_class_info
+  - intent: class_name
+    entities:
+    - class: 12B
+  - slot_was_set:
+    - class: 12B
+  - action: utter_give_name
+  - intent: register_name
+    entities:
+    - name: jhon_
+    - name: jhon_
+  - slot_was_set:
+    - name: jhon_
+  - action: show_report_card
+  - action: utter_reportcard_email
+  - intent: nlu_fallback
+    entities:
+    - email: bhakat2004@gmail.com
+    - email: bhakat2004@gmail.com
+  - slot_was_set:
+    - class: 12B
+  - slot_was_set:
+    - name: jhon_
+  - slot_was_set:
+    - email: bhakat2004@gmail.com
+  - action: report_email_submit
+  - action: utter_your_email_sent
+  - action: utter_related_details_4
