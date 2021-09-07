@@ -163,7 +163,7 @@ class ZoomIDS(Action):
 
         if r != None:
             cls = str(r[1])+r[2]
-            D = {"11A":"https://i.imgur.com/w5Zjzcx.jpeg","11B":"https://i.imgur.com/QfTXIXb.jpeg","11C":"https://i.imgur.com/z8RjKyL.jpeg","11D":"https://i.imgur.com/itgvPS0.jpeg","11E":"https://i.imgur.com/dTYhTSH.jpeg","12A":"https://i.imgur.com/FBZjOkU.jpeg","12B":"https://i.imgur.com/wjPFf7b.jpeg","12C":"https://i.imgur.com/gvcKsf1.jpeg","12D":"https://i.imgur.com/23tVRBO.jpeg","12E":"https://i.imgur.com/n0Znsa2.jpeg"}
+            D = {"11A":"https://i.imgur.com/7B0BrK3.jpeg","11B":"https://i.imgur.com/62k79FJ.jpg","11C":"https://i.imgur.com/KGEZfD1.jpg","11D":"https://i.imgur.com/c5SaVOX.jpg","11E":"https://i.imgur.com/SDsClmv.jpg","12A":"https://i.imgur.com/avFlM20.jpg","12B":"https://i.imgur.com/olIxPa7.jpg","12C":"https://i.imgur.com/E0TVIoV.jpg","12D":"https://i.imgur.com/m6v7Oap.jpg","12E":"https://i.imgur.com/VyQ4TKg.jpg"}
             for dict in D.keys():
                 if dict==cls:
                     val=D[dict]
@@ -171,7 +171,7 @@ class ZoomIDS(Action):
         
         elif r == None:
             dispatcher.utter_message(text="Student ID is required to access meeting ID's. Please enter yours and then ask for zoom meeting ID again!")
-            #return [SlotSet("idno", "needed_for_zoom")]
+            #return [SlotSet("idno", "needed_for_zoom")]https://i.imgur.com/62k79FJ.jpg
         
 class ReportCard(Action):
 
