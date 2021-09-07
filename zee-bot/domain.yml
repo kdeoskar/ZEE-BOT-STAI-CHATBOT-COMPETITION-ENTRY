@@ -173,7 +173,7 @@ responses:
   - image: https://i.imgur.com/rL2nqKT.jpeg
     text: Here is the fee structure.
   utter_show_admission_details:
-  - image: https://i.imgur.com/vnHjq5Q.png
+  - image: https://i.imgur.com/St2zKEC.jpg
     text: Here are some details regarding admissions.
   utter_ask_month:
   - buttons:
@@ -205,9 +205,9 @@ responses:
   utter_ask_uniform:
   - buttons:
     - payload: /seek_uniform{{"uniform":"senior"}}
-      title: Senior section
+      title: Senior section (6 to 12)
     - payload: /seek_uniform{{"uniform":"junior"}}
-      title: Junior section
+      title: Junior section (KGII to 5)
     text: Which uniform would you like to see
   utter_ask_hol:
   - buttons:
@@ -230,7 +230,7 @@ responses:
       title: ART
     text: Which event's details would you like to see?
   utter_contact_school:
-  - image: https://i.imgur.com/5nQWWSc.png
+  - image: https://i.imgur.com/MaThkes.jpg
     text: You can contact us through the Email as well as by calling us!
   utter_school_timings:
   - image: https://i.imgur.com/cxTuYFQ.jpg
