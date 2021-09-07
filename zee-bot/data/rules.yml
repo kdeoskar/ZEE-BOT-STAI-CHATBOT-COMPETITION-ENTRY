@@ -222,3 +222,21 @@ rules:
   steps:
   - intent: reset_id
   - action: action_reset_id
+
+# TEACHERS CONTACT FORM
+- rule: Activate teachers contact form
+  steps:
+  - intent: seek_contact_teachers
+  - action: contact_teachers_form
+  - active_loop: contact_teachers_form
+
+- rule: Submit teachers contact form
+  condition:
+  - active_loop: contact_teachers_form
+  steps:
+  - action: contact_teachers_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_show_teachers_contact
+  - action: utter_show_options
