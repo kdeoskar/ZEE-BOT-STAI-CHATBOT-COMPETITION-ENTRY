@@ -71,7 +71,7 @@ responses:
   utter_show_options:
   - buttons:
     - payload: /fill_id_info
-      title: Enter ID (Login)
+      title: Enter ID
     - payload: /reset_id
       title: Reset ID
     - payload: /seek_zoom
@@ -135,7 +135,7 @@ responses:
   - text: Success! Your id number is {idno}
   utter_school_location:
   - image: https://i.imgur.com/RD2e0JC.jpeg
-    text: The xyz international school is situated in Street 1800
+    text: The xyz international school is situated on street 1800.
   utter_ask_class:
   - text: Please enter your class and section.
   utter_ask_exam:
@@ -225,13 +225,11 @@ responses:
     - payload: /seek_events{{"event":"art"}}
       title: ART
     text: Which event's details would you like to see?
-  utter_school_contact:
+  utter_contact_school:
   - image: https://i.imgur.com/5nQWWSc.png
     text: You can contact us through the Email as well as by calling us!
-  utter_respond_chitchat:
-  - text: "The weather is fairly pleasant right now!"
   utter_school_timings:
-  - image: "https://i.imgur.com/7VLEZMf.jpeg"
+  - image: https://i.imgur.com/7VLEZMf.jpeg
     text: "Here are the school timings."
 actions:
 - action_show_COVIDinfo
@@ -251,6 +249,7 @@ actions:
 - action_show_events
 - action_show_timetable
 - action_reset_id
+- action_show_teachers_contact
 forms:
   id_form:
     required_slots:
@@ -299,5 +298,10 @@ forms:
   timetable_form:
     required_slots:
       class:
-      - entity: event
+      - entity: class # change this to class in github code
+        type: from_entity
+  contact_teachers_form:
+    required_slots:
+      class:
+      - entity: class
         type: from_entity
