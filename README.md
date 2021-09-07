@@ -5,10 +5,10 @@ To run the bot, you need to install **Rasa 2.0** in a **virtual environment**
 
 # OPEN SOURCE CODE/TECHNOLOGIES USED:
 
-**1. Rasa Open Source**
+**1. Rasa Open Source**:
 The Rasa Open Source AI Chatbot software was used as the base for this project. Rasa Open Source is governed by the Apache 2.0 License.
 
-**2. Scalableminds chatroom**
+**2. Scalableminds chatroom**:
 The scalableminds chatroom code was modified and used to build the chatbot widget in this project. It is governed by the GNU Affero General Public License v3.0 .
 
 # STEP-1
