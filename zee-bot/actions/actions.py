@@ -128,7 +128,6 @@ class SchoolUniform(Action):
         # elif name=='junior':
         #     dispatcher.utter_message(image="https://i.imgur.com/SSN8Yj1.jpeg") 
 
-# TO BE COMPLETED
 class SchoolHolidays(Action):
 
     def name(self) -> Text:
@@ -136,17 +135,15 @@ class SchoolHolidays(Action):
 
     def run(self, dispatcher: "CollectingDispatcher", tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        name=tracker.get_slot("holiday")
+        name=tracker.get_slot("hol")
 
-        D={"summer break":"https://i.imgur.com/1UGk0jd.jpeg","winter break":"https://i.imgur.com/iEU89bG.jpeg"}
+        D={"summer break":"https://i.imgur.com/1UGk0jd.jpeg","winter break":"https://i.imgur.com/iEU89bG.jpeg", "other": "https://i.imgur.com/zOhb0i7.jpg"}
         for dict in D.keys():
             if name==dict:
                 val=D[dict]
-                print(val)
-                dispatcher.utter_message(text="This is the {} schedule".format(name),image=val)  
+                dispatcher.utter_message(text="This is the schedule for the {} ".format(name),image=val)  
 
-            elif name == "other":
-                pass
+        return [SlotSet("hol", None)]
 
 class ZoomIDS(Action):
     def name(self) -> Text:
