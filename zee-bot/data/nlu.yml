@@ -308,3 +308,10 @@ nlu:
     - Let me reset my id
     - reset my student ID
     - cancel the current student ID
+- intent: seek_school_timings
+  examples: |
+    - What are the school timings?
+    - What time does school start?
+    - What time does school end?
+    - When does school start?
+    - When does school end?
