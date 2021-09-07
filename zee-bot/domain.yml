@@ -134,7 +134,7 @@ responses:
   - text: Success! Your id number is {idno}
   utter_school_location:
   - image: https://i.imgur.com/RD2e0JC.jpeg
-    text: The xyz international school is situated in Ghubra street 1800
+    text: The xyz international school is situated in Street 1800
   utter_ask_class:
   - text: Please enter your class and section.
   utter_ask_exam:
