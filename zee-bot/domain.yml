@@ -233,7 +233,7 @@ responses:
   - image: https://i.imgur.com/5nQWWSc.png
     text: You can contact us through the Email as well as by calling us!
   utter_school_timings:
-  - image: https://i.imgur.com/7VLEZMf.jpeg
+  - image: https://i.imgur.com/cxTuYFQ.jpg
     text: "Here are the school timings."
 actions:
 - action_show_COVIDinfo
