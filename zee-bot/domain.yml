@@ -71,11 +71,15 @@ responses:
   utter_show_options:
   - buttons:
     - payload: /fill_id_info
-      title: Enter ID
+      title: Enter ID (login)
     - payload: /reset_id
       title: Reset ID
     - payload: /seek_zoom
       title: Zoom IDs
+    - payload: /seek_timetable
+      title: Timetable
+    - payload: /seek_school_timings
+      title: School Timings
     - payload: /seek_report_card
       title: Report Card
     - payload: /seek_contact_school
