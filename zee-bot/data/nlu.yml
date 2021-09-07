@@ -287,11 +287,6 @@ nlu:
     - /seek_timetable_help
     - show timtable
     - show class timetable of [12C](class)
-- intent: chitchat
-  examples: |
-    - What's the weather like?
-    - What is the meaning of life?
-    - How is the weather right now?
 - intent: seek_contact_school
   examples: |
     - How can i contact the school?
