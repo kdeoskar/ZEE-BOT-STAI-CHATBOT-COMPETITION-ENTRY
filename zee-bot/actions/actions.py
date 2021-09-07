@@ -41,7 +41,7 @@ class Actionvideo(Action):
        return "action_show_school_vid"
 
     def run(self, dispatcher: "CollectingDispatcher", tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        url="https://www.youtube.com/watch?v=0_e-wmnYPsw"
+        url="https://www.youtube.com/watch?v=4PvGNzi1dnY"
         dispatcher.utter_message("...Playing the video!")
         webbrowser.open(url)
         return []
@@ -200,10 +200,10 @@ class Events(Action):
 
     def run(self, dispatcher: "CollectingDispatcher", tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         name=tracker.get_slot("event")
-        D={"mun":"https://i.imgur.com/FTeMwT4.jpeg",
+        D={"mun":"https://i.imgur.com/Sy6tjAH.jpg",
         "fest":"https://i.imgur.com/l5wKsMm.jpeg",
         "quiz":"https://i.imgur.com/RtIGTI5.jpeg",
-        "art":"https://i.imgur.com/JE21Mej.jpeg"}
+        "art":"https://i.imgur.com/yU5qVPJ.jpg"}
         
         for dict in D.keys():
             print(name)
@@ -238,7 +238,7 @@ class ContactTeachers(Action):
     def run(self, dispatcher: "CollectingDispatcher", tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         cls=tracker.get_slot("class")
-        D={"12A":"https://i.imgur.com/ryzkY6I.jpeg","12B":"https://i.imgur.com/rR3zZAm.jpeg","12C":"","12D":"","11A":"","11B":"","11C":"","11D":""}
+        D={"12A":"https://i.imgur.com/DBGckhN.jpg","12B":"https://i.imgur.com/DtoyKVk.jpg","12C":"https://i.imgur.com/LV2xipp.jpg","12D":"https://i.imgur.com/7gQCzOJ.jpg","12E":"https://i.imgur.com/EMe2hlr.jpg","11A":"https://i.imgur.com/bByBZX9.jpg","11B":"https://i.imgur.com/Y4B8aZh.jpg","11C":"https://i.imgur.com/1CpjE4d.jpg","11D":"https://i.imgur.com/8qOP8yQ.jpg","11E":"https://i.imgur.com/fNGrIfc.jpg"}
         for dict in D.keys(): 
             if cls == dict:
                 val = D[dict] 
