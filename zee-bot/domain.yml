@@ -32,6 +32,7 @@ intents:
 - seek_contact_school
 - seek_contact_teachers
 - reset_id
+- seek_school_timings
 entities:
 - class
 - exam
@@ -229,6 +230,9 @@ responses:
     text: You can contact us through the Email as well as by calling us!
   utter_respond_chitchat:
   - text: "The weather is fairly pleasant right now!"
+  utter_school_timings:
+  - image: "https://i.imgur.com/7VLEZMf.jpeg"
+    text: "Here are the school timings."
 actions:
 - action_show_COVIDinfo
 - action_show_academic_calendar
