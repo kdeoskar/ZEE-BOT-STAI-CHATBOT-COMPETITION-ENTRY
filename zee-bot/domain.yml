@@ -226,7 +226,7 @@ responses:
       title: ART
     text: Which event's details would you like to see?
   utter_school_contact:
-  - image: https://i.imgur.com/rL2nqKT.jpeg
+  - image: https://i.imgur.com/5nQWWSc.png
     text: You can contact us through the Email as well as by calling us!
   utter_respond_chitchat:
   - text: "The weather is fairly pleasant right now!"

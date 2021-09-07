@@ -315,9 +315,3 @@ nlu:
     - What time does school end?
     - When does school start?
     - When does school end?
-- intent: seek_contact_school
-  examples: |
-    - How can i contact the school?
-    - I want to contact the school.
-    - What is the Principal's Email Address?
-    - What is the Vice-Principal's Email Address?
