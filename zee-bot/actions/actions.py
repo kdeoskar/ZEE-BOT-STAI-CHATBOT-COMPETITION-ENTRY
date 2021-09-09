@@ -160,7 +160,7 @@ class ZoomIDS(Action):
 
         if r != None:
             cls = str(r[1])+r[2]
-            D = {"11A":"https://i.imgur.com/w5Zjzcx.jpeg","11B":"https://i.imgur.com/QfTXIXb.jpeg","11C":"https://i.imgur.com/z8RjKyL.jpeg","11D":"https://i.imgur.com/itgvPS0.jpeg","11E":"https://i.imgur.com/dTYhTSH.jpeg","12A":"https://i.imgur.com/FBZjOkU.jpeg","12B":"https://i.imgur.com/wjPFf7b.jpeg","12C":"https://i.imgur.com/gvcKsf1.jpeg","12D":"https://i.imgur.com/23tVRBO.jpeg","12E":"https://i.imgur.com/n0Znsa2.jpeg"}
+            D = {"11A":"https://i.imgur.com/o1Tl3zf.jpg","11B":"https://i.imgur.com/SBVGW9v.jpg","11C":"https://i.imgur.com/EoI1CF4.jpg","11D":"https://i.imgur.com/07nGaza.jpg","11E":"https://i.imgur.com/P9jPb2Q.jpg","12A":"https://i.imgur.com/MGameZc.jpg","12B":"https://i.imgur.com/BuRbK6o.jpg","12C":"https://i.imgur.com/g9k9av4.jpg","12D":"https://i.imgur.com/NY89ill.jpg","12E":"https://i.imgur.com/d4YcS9K.jpg"}
             for dict in D.keys():
                 if dict==cls:
                     val=D[dict]
