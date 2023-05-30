@@ -23,3 +23,6 @@ The scalableminds chatroom code was modified and used to build the chatbot widge
      
 # STEP-3
 - Double click on the HTML file named "home.html" to run the website locally.
+
+https://github.com/kdeoskar/ZEE-BOT-STAI-CHATBOT-COMPETITION-ENTRY/assets/87207167/2009a5c2-8e5e-4f77-8141-7a66067ee5ee
+
